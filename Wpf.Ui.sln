@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Ui.FontMapper", "src\Wp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Ui.SimpleDemo", "src\Wpf.Ui.SimpleDemo\Wpf.Ui.SimpleDemo.csproj", "{3390B1E8-53F6-45D3-9EB6-445F7EB10E25}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Ui.SimpleConsoleDemo", "src\Wpf.Ui.SimpleConsoleDemo\Wpf.Ui.SimpleConsoleDemo.csproj", "{57110BF2-A055-4EA9-9EC9-22742CC5E698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,14 @@ Global
 		{3390B1E8-53F6-45D3-9EB6-445F7EB10E25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3390B1E8-53F6-45D3-9EB6-445F7EB10E25}.Release|x86.ActiveCfg = Release|Any CPU
 		{3390B1E8-53F6-45D3-9EB6-445F7EB10E25}.Release|x86.Build.0 = Release|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Debug|x86.Build.0 = Debug|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Release|x86.ActiveCfg = Release|Any CPU
+		{57110BF2-A055-4EA9-9EC9-22742CC5E698}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

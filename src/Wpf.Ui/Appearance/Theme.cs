@@ -1,9 +1,10 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
 using System;
+using System.Linq;
 using System.Windows;
 using Wpf.Ui.Interop;
 
@@ -185,6 +186,48 @@ public static class Theme
             return false;
 
         return sysTheme is SystemThemeType.Light or SystemThemeType.Flow or SystemThemeType.Sunrise;
+    }
+
+
+    /// <summary>
+    /// Applies Resources in the <paramref name="frameworkElement"/>.
+    /// </summary>
+    public static void Apply(FrameworkElement frameworkElement)
+    {
+        if (frameworkElement is null)
+            return;
+
+        var resourcesRemove = frameworkElement.Resources.MergedDictionaries
+            .Where(e => e.Source is not null)
+            .Where(e => e.Source.ToString().ToLower().Contains(AppearanceData.LibraryNamespace))
+            .ToArray();
+
+        foreach (var resource in resourcesRemove)
+        {
+            System.Diagnostics.Debug.WriteLine(
+                $"INFO | {typeof(Accent)} Remove {resource.Source}",
+                "Wpf.Ui.Appearance"
+            );
+            frameworkElement.Resources.MergedDictionaries.Remove(resource);
+        }
+
+        foreach (var resource in UiApplication.Current.Resources.MergedDictionaries)
+        {
+            System.Diagnostics.Debug.WriteLine(
+                $"INFO | {typeof(Accent)} Add {resource.Source}",
+                "Wpf.Ui.Appearance"
+            );
+            frameworkElement.Resources.MergedDictionaries.Add(resource);
+        }
+
+        foreach (System.Collections.DictionaryEntry resource in UiApplication.Current.Resources)
+        {
+            System.Diagnostics.Debug.WriteLine(
+                $"INFO | {typeof(Accent)} Copy Resource {resource.Key} - {resource.Value}",
+                "Wpf.Ui.Appearance"
+            );
+            frameworkElement.Resources[resource.Key] = resource.Value;
+        }
     }
 
     /// <summary>
