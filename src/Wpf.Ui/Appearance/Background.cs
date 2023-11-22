@@ -223,7 +223,7 @@ public static class Background
             return false;
 
         // Global resources
-        var backgroundBrush = Application.Current.Resources["ApplicationBackgroundBrush"];
+        var backgroundBrush = UiApplication.Current.Resources["ApplicationBackgroundBrush"];
 
         // Local resources
         if (backgroundBrush is not SolidColorBrush)

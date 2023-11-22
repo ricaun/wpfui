@@ -515,7 +515,7 @@ public class Snackbar
 
         await Task.Delay(timeout);
 
-        if (Application.Current == null)
+        if (UiApplication.Current == null)
             return false;
 
         if (!_eventIdentifier.IsEqual(currentEvent))

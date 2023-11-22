@@ -1,4 +1,4 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
@@ -27,7 +27,7 @@ public static class Accent
     {
         get
         {
-            var resource = Application.Current.Resources["SystemAccentColor"];
+            var resource = UiApplication.Current.Resources["SystemAccentColor"];
 
             if (resource is Color color)
                 return color;
@@ -48,7 +48,7 @@ public static class Accent
     {
         get
         {
-            var resource = Application.Current.Resources["SystemAccentColorPrimary"];
+            var resource = UiApplication.Current.Resources["SystemAccentColorPrimary"];
 
             if (resource is Color color)
                 return color;
@@ -69,7 +69,7 @@ public static class Accent
     {
         get
         {
-            var resource = Application.Current.Resources["SystemAccentColorSecondary"];
+            var resource = UiApplication.Current.Resources["SystemAccentColorSecondary"];
 
             if (resource is Color color)
                 return color;
@@ -90,7 +90,7 @@ public static class Accent
     {
         get
         {
-            var resource = Application.Current.Resources["SystemAccentColorTertiary"];
+            var resource = UiApplication.Current.Resources["SystemAccentColorTertiary"];
 
             if (resource is Color color)
                 return color;
@@ -210,31 +210,31 @@ public static class Accent
 #if DEBUG
             System.Diagnostics.Debug.WriteLine("INFO | Text on accent is DARK", "Wpf.Ui.Accent");
 #endif
-            Application.Current.Resources["TextOnAccentFillColorPrimary"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorPrimary"] = Color.FromArgb(
                 0xFF,
                 0x00,
                 0x00,
                 0x00
             );
-            Application.Current.Resources["TextOnAccentFillColorSecondary"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorSecondary"] = Color.FromArgb(
                 0x80,
                 0x00,
                 0x00,
                 0x00
             );
-            Application.Current.Resources["TextOnAccentFillColorDisabled"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorDisabled"] = Color.FromArgb(
                 0x77,
                 0x00,
                 0x00,
                 0x00
             );
-            Application.Current.Resources["TextOnAccentFillColorSelectedText"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorSelectedText"] = Color.FromArgb(
                 0x00,
                 0x00,
                 0x00,
                 0x00
             );
-            Application.Current.Resources["AccentTextFillColorDisabled"] = Color.FromArgb(
+            UiApplication.Current.Resources["AccentTextFillColorDisabled"] = Color.FromArgb(
                 0x5D,
                 0x00,
                 0x00,
@@ -246,31 +246,31 @@ public static class Accent
 #if DEBUG
             System.Diagnostics.Debug.WriteLine("INFO | Text on accent is LIGHT", "Wpf.Ui.Accent");
 #endif
-            Application.Current.Resources["TextOnAccentFillColorPrimary"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorPrimary"] = Color.FromArgb(
                 0xFF,
                 0xFF,
                 0xFF,
                 0xFF
             );
-            Application.Current.Resources["TextOnAccentFillColorSecondary"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorSecondary"] = Color.FromArgb(
                 0x80,
                 0xFF,
                 0xFF,
                 0xFF
             );
-            Application.Current.Resources["TextOnAccentFillColorDisabled"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorDisabled"] = Color.FromArgb(
                 0x87,
                 0xFF,
                 0xFF,
                 0xFF
             );
-            Application.Current.Resources["TextOnAccentFillColorSelectedText"] = Color.FromArgb(
+            UiApplication.Current.Resources["TextOnAccentFillColorSelectedText"] = Color.FromArgb(
                 0xFF,
                 0xFF,
                 0xFF,
                 0xFF
             );
-            Application.Current.Resources["AccentTextFillColorDisabled"] = Color.FromArgb(
+            UiApplication.Current.Resources["AccentTextFillColorDisabled"] = Color.FromArgb(
                 0x5D,
                 0xFF,
                 0xFF,
@@ -278,26 +278,26 @@ public static class Accent
             );
         }
 
-        Application.Current.Resources["SystemAccentColor"] = systemAccent;
-        Application.Current.Resources["SystemAccentColorPrimary"] = primaryAccent;
-        Application.Current.Resources["SystemAccentColorSecondary"] = secondaryAccent;
-        Application.Current.Resources["SystemAccentColorTertiary"] = tertiaryAccent;
+        UiApplication.Current.Resources["SystemAccentColor"] = systemAccent;
+        UiApplication.Current.Resources["SystemAccentColorPrimary"] = primaryAccent;
+        UiApplication.Current.Resources["SystemAccentColorSecondary"] = secondaryAccent;
+        UiApplication.Current.Resources["SystemAccentColorTertiary"] = tertiaryAccent;
 
-        Application.Current.Resources["SystemAccentBrush"] = secondaryAccent.ToBrush();
-        Application.Current.Resources["SystemFillColorAttentionBrush"] = secondaryAccent.ToBrush();
-        Application.Current.Resources["AccentTextFillColorPrimaryBrush"] = tertiaryAccent.ToBrush();
-        Application.Current.Resources["AccentTextFillColorSecondaryBrush"] =
+        UiApplication.Current.Resources["SystemAccentBrush"] = secondaryAccent.ToBrush();
+        UiApplication.Current.Resources["SystemFillColorAttentionBrush"] = secondaryAccent.ToBrush();
+        UiApplication.Current.Resources["AccentTextFillColorPrimaryBrush"] = tertiaryAccent.ToBrush();
+        UiApplication.Current.Resources["AccentTextFillColorSecondaryBrush"] =
             tertiaryAccent.ToBrush();
-        Application.Current.Resources["AccentTextFillColorTertiaryBrush"] =
+        UiApplication.Current.Resources["AccentTextFillColorTertiaryBrush"] =
             secondaryAccent.ToBrush();
-        Application.Current.Resources["AccentFillColorSelectedTextBackgroundBrush"] =
+        UiApplication.Current.Resources["AccentFillColorSelectedTextBackgroundBrush"] =
             systemAccent.ToBrush();
-        Application.Current.Resources["AccentFillColorDefaultBrush"] = secondaryAccent.ToBrush();
+        UiApplication.Current.Resources["AccentFillColorDefaultBrush"] = secondaryAccent.ToBrush();
 
-        Application.Current.Resources["AccentFillColorSecondaryBrush"] = secondaryAccent.ToBrush(
+        UiApplication.Current.Resources["AccentFillColorSecondaryBrush"] = secondaryAccent.ToBrush(
             0.9
         );
-        Application.Current.Resources["AccentFillColorTertiaryBrush"] = secondaryAccent.ToBrush(
+        UiApplication.Current.Resources["AccentFillColorTertiaryBrush"] = secondaryAccent.ToBrush(
             0.8
         );
     }

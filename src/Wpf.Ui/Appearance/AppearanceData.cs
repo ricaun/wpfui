@@ -1,4 +1,4 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
+// This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
@@ -56,6 +56,8 @@ internal static class AppearanceData
     /// </summary>
     public static void AddHandle(Window window)
     {
+        if (window is null)
+            return;
         AddHandle(new WindowInteropHelper(window).Handle);
     }
 
@@ -73,6 +75,8 @@ internal static class AppearanceData
     /// </summary>
     public static void RemoveHandle(Window window)
     {
+        if (window is null)
+            return;
         RemoveHandle(new WindowInteropHelper(window).Handle);
     }
 
@@ -90,6 +94,8 @@ internal static class AppearanceData
     /// </summary>
     public static bool HasHandle(Window window)
     {
+        if (window is null)
+            return false;
         return HasHandle(new WindowInteropHelper(window).Handle);
     }
 

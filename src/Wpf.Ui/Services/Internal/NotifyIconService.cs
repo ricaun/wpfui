@@ -133,7 +133,7 @@ internal class NotifyIconService : IDisposable, INotifyIcon
             "Wpf.Ui.NotifyIcon"
         );
 #endif
-        var mainWindow = Application.Current.MainWindow;
+        var mainWindow = UiApplication.Current.MainWindow;
 
         if (mainWindow == null)
             return;

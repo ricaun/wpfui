@@ -103,7 +103,7 @@ public static class WindowExtensions
     /// <param name="window">Selected window.</param>
     public static Window ApplyDefaultBackground(this Window window)
     {
-        var applicationBackgroundRaw = Application.Current.Resources["ApplicationBackgroundColor"];
+        var applicationBackgroundRaw = UiApplication.Current.Resources["ApplicationBackgroundColor"];
 
         if (applicationBackgroundRaw is not Color backgroundColor)
             return window;
