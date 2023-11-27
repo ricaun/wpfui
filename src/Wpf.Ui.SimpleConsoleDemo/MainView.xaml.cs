@@ -5,6 +5,7 @@
 
 using System;
 using System.Windows;
+using System.Windows.Media;
 
 namespace Wpf.Ui.SimpleConsoleDemo;
 public partial class MainView : Window
@@ -13,7 +14,24 @@ public partial class MainView : Window
     {
         InitializeComponent();
 
-        Wpf.Ui.Appearance.Accent.ApplySystemAccent();
+        //Wpf.Ui.Appearance.Theme.Apply(
+        //    Wpf.Ui.Appearance.ThemeType.Dark
+        //);
+        //Wpf.Ui.Appearance.Accent.Apply(Colors.LightBlue);
+
         Wpf.Ui.Appearance.Theme.Apply(this);
+        Appearance.Theme.Changed += (s, e) =>
+        {
+            Wpf.Ui.Appearance.Theme.Apply(this);
+        };
+
+        this.KeyDown += (s, e) =>
+        {
+            if (e.Key == System.Windows.Input.Key.T)
+            {
+                var theme = Wpf.Ui.Appearance.Theme.GetAppTheme() == Appearance.ThemeType.Light ? Appearance.ThemeType.Dark : Appearance.ThemeType.Light;
+                Wpf.Ui.Appearance.Theme.Apply(theme);
+            }
+        };
     }
 }

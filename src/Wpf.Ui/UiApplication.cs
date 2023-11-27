@@ -30,6 +30,7 @@ public class UiApplication
                     var controlsDictionary = new Wpf.Ui.Markup.ControlsDictionary();
                     _resources.MergedDictionaries.Add(themesDictionary);
                     _resources.MergedDictionaries.Add(controlsDictionary);
+                    Wpf.Ui.Appearance.Accent.ApplySystemAccent();
                 }
                 catch { }
             }

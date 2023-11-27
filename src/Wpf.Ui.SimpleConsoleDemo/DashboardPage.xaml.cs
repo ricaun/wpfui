@@ -14,6 +14,10 @@ public partial class DashboardPage
     {
         InitializeComponent();
         Wpf.Ui.Appearance.Theme.Apply(this);
+        Appearance.Theme.Changed += (s, e) =>
+        {
+            Wpf.Ui.Appearance.Theme.Apply(this);
+        };
     }
 
     private void TaskbarStateComboBox_OnSelectionChanged(
