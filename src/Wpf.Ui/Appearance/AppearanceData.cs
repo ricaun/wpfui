@@ -23,7 +23,7 @@ internal static class AppearanceData
     /// <summary>
     /// Namespace for the XAML dictionaries.
     /// </summary>
-    public const string LibraryNamespace = "wpf.ui;";
+    public static string LibraryNamespace { get; } = $"{typeof(AppearanceData).Assembly.GetName().Name.ToLower()};";
 
     /// <summary>
     /// Main dictionary for WPF UI controls.
@@ -33,13 +33,27 @@ internal static class AppearanceData
     /// <summary>
     /// Default <see cref="System.Uri"/> for the application theme dictionaries.
     /// </summary>
-    public const string LibraryThemeDictionariesUri =
-        "pack://application:,,,/Wpf.Ui;component/Styles/Theme/";
+    public static string LibraryThemeDictionariesUri { get; } = $"{LibraryComponentName}Styles/Theme/";
 
     /// <summary>
     /// Default <see cref="System.Uri"/> for the application theme dictionaries.
     /// </summary>
-    public const string LibraryDictionariesUri = "pack://application:,,,/Wpf.Ui;component/Styles/";
+    public static string LibraryDictionariesUri { get; } = $"{LibraryComponentName}Styles/";
+
+    /// <summary>
+    /// Default component Name (pack://application:,,,/{AssemblyName};component/)
+    /// </summary>
+    public static string LibraryComponentName => GetLibraryComponentName();
+
+    private static string GetLibraryComponentName()
+    {
+        var component = $"pack://application:,,,/{typeof(AppearanceData).Assembly.GetName().Name};component/";
+        //Console.WriteLine(component);
+        //Console.WriteLine(LibraryThemeDictionariesUri);
+        //Console.WriteLine(LibraryDictionariesUri);
+        //Console.WriteLine(LibraryNamespace);
+        return component;
+    }
 
     /// <summary>
     /// Current system theme.
