@@ -1,7 +1,26 @@
 ![WPF UI Banner Dark](https://user-images.githubusercontent.com/13592821/174165081-9c62d188-ecb6-4200-abd8-419afbaf32c2.png#gh-dark-mode-only)
 ![WPF UI Banner Light](https://user-images.githubusercontent.com/13592821/174165388-921c4745-90ed-4396-9a4b-9c86478f7447.png#gh-light-mode-only)
 
-# WPF UI
+# Revit WPF UI
+
+This is an edited version of the [wpfui](https://github.com/lepoco/wpfui) version 2.2.0 to work with Autodesk Revit.
+
+Check the example [Wpf.Ui.SimpleConsoleDemo](src/Wpf.Ui.SimpleConsoleDemo).
+
+Use the code below to apply the Wpf.Ui theme to your WPF application.
+```C#
+public MainView()
+{
+    InitializeComponent();
+    Wpf.Ui.Appearance.Theme.Apply(this);
+}
+```
+
+In the `.xaml` use the default `xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"` to select the Wpf.Ui controls.
+
+The assembly was changed to `Revit.Wpf.Ui.2.2.0` to avoid conflicts with the original `Wpf.Ui` package.
+
+---
 
 [Created with ❤ in Poland by lepo.co](https://dev.lepo.co/)  
 A simple way to make your application written in WPF keep up with modern design trends. Library changes the base elements like `Page`, `ToggleButton` or `List`, and also includes additional controls like `Navigation`, `NumberBox`, `Dialog` or `Snackbar`.

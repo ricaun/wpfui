@@ -7,10 +7,10 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Wpf.Ui</RootNamespace>
-    <AssemblyName>Revit.Wpf.Ui</AssemblyName>
-    <PackageId>WPF-UI</PackageId>
-    <Product>WPF UI</Product>
-    <Title>WPF UI</Title>
+    <AssemblyName>Revit.Wpf.Ui.$(Version)</AssemblyName>
+    <PackageId>REVIT-WPF-UI</PackageId>
+    <Product>REVIT WPF UI</Product>
+    <Title>REVIT WPF UI</Title>
     <NeutralLanguage>en-US</NeutralLanguage>
     <UseWPF>true</UseWPF>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
