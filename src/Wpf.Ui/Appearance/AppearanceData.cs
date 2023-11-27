@@ -23,7 +23,7 @@ internal static class AppearanceData
     /// <summary>
     /// Namespace for the XAML dictionaries.
     /// </summary>
-    public const string LibraryNamespace = "ui;";
+    public const string LibraryNamespace = "wpf.ui;";
 
     /// <summary>
     /// Main dictionary for WPF UI controls.
