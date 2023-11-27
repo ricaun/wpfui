@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Wpf.Ui</RootNamespace>
-    <AssemblyName>Wpf.Ui</AssemblyName>
+    <AssemblyName>Revit.Wpf.Ui</AssemblyName>
     <PackageId>WPF-UI</PackageId>
     <Product>WPF UI</Product>
     <Title>WPF UI</Title>
