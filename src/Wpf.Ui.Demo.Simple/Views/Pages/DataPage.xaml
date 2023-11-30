@@ -33,7 +33,8 @@
                         Appearance="Secondary"
                         Background="{Binding Color, Mode=OneWay}"
                         FontSize="25"
-                        Icon="Fluent24" />
+                        Icon="Fluent24" 
+                        Click="Button_Click"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ui:VirtualizingItemsControl>

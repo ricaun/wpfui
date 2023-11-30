@@ -32,12 +32,12 @@ public partial class SettingsPage
 
     private void OnLightThemeRadioButtonChecked(object sender, RoutedEventArgs e)
     {
-        Appearance.ApplicationThemeManager.Apply(ApplicationTheme.Light);
+        Appearance.ApplicationThemeManager.Apply(ApplicationTheme.Light, updateAccent: false);
     }
 
     private void OnDarkThemeRadioButtonChecked(object sender, RoutedEventArgs e)
     {
-        Appearance.ApplicationThemeManager.Apply(ApplicationTheme.Dark);
+        Appearance.ApplicationThemeManager.Apply(ApplicationTheme.Dark, updateAccent: false);
     }
 
     private string GetAssemblyVersion()
