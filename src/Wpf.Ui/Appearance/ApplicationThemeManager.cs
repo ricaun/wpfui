@@ -36,9 +36,17 @@ public static class ApplicationThemeManager
 {
     private static ApplicationTheme _cachedApplicationTheme = ApplicationTheme.Unknown;
 
-    internal const string LibraryNamespace = "wpf.ui;";
+    private static string AssemblyName { get; } = typeof(ApplicationThemeManager).Assembly.GetName().Name ?? "Wpf.Ui";
 
-    internal const string ThemesDictionaryPath = "pack://application:,,,/Wpf.Ui;component/Resources/Theme/";
+    private static string LibraryComponent { get; } = $"pack://application:,,,/{AssemblyName};component/";
+
+    internal static string GetLibraryComponent(string path) => LibraryComponent + path;
+
+    internal static string LibraryNamespace { get; } = AssemblyName.ToLower() + ";";
+
+    internal static string ThemesDictionaryPath { get; } = GetLibraryComponent("Resources/Theme/");
+
+    internal static string ControlDictionaryPath { get; } = GetLibraryComponent("Resources/Wpf.Ui.xaml");
 
     /// <summary>
     /// Event triggered when the application's theme is changed.
