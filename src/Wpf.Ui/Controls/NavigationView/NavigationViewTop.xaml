@@ -4,9 +4,9 @@
     xmlns:controls="clr-namespace:Wpf.Ui.Controls"
     xmlns:converters="clr-namespace:Wpf.Ui.Converters">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewBasePaneButtonStyle.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewItemDefaultStyle.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewConstants.xaml" />
+        <ResourceDictionary Source="NavigationViewBasePaneButtonStyle.xaml" />
+        <ResourceDictionary Source="NavigationViewItemDefaultStyle.xaml" />
+        <ResourceDictionary Source="NavigationViewConstants.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="TopNavigationViewTemplate" TargetType="{x:Type controls:NavigationView}">

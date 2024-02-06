@@ -14,7 +14,7 @@
     xmlns:controls="clr-namespace:Wpf.Ui.Controls">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/Button/Button.xaml" />
+        <ResourceDictionary Source="../Button/Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style

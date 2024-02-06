@@ -15,7 +15,7 @@
     xmlns:markup="clr-namespace:Wpf.Ui.Markup">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/Button/Button.xaml" />
+        <ResourceDictionary Source="../Button/Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Thickness x:Key="ButtonChevronIconMargin">8,0,0,0</Thickness>

@@ -14,9 +14,9 @@
     <FontFamily x:Key="SegoeFluentIcons">Segoe Fluent Icons</FontFamily>
 
     <!--  https://github.com/microsoft/fluentui-system-icons  -->
-    <FontFamily x:Key="FluentSystemIcons">pack://application:,,,/Wpf.Ui;component/Resources/Fonts/#FluentSystemIcons-Regular</FontFamily>
+    <FontFamily x:Key="FluentSystemIcons">Fonts/#FluentSystemIcons-Regular</FontFamily>
 
     <!--  https://github.com/microsoft/fluentui-system-icons  -->
-    <FontFamily x:Key="FluentSystemIconsFilled">pack://application:,,,/Wpf.Ui;component/Resources/Fonts/#FluentSystemIcons-Filled</FontFamily>
+    <FontFamily x:Key="FluentSystemIconsFilled">Fonts/#FluentSystemIcons-Filled</FontFamily>
 
 </ResourceDictionary>
