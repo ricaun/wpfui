@@ -23,9 +23,9 @@ public partial class NavigationService : INavigationService
     private IPageService? _pageService;
 
     /// <summary>
-    /// Control representing navigation.
+    /// Gets or sets the control representing navigation.
     /// </summary>
-    protected INavigationView? NavigationControl;
+    protected INavigationView? NavigationControl { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="NavigationService"/> class.
@@ -81,11 +81,27 @@ public partial class NavigationService : INavigationService
     }
 
     /// <inheritdoc />
+    public bool Navigate(Type pageType, object? dataContext)
+    {
+        ThrowIfNavigationControlIsNull();
+
+        return NavigationControl!.Navigate(pageType, dataContext);
+    }
+
+    /// <inheritdoc />
     public bool Navigate(string pageTag)
     {
         ThrowIfNavigationControlIsNull();
 
         return NavigationControl!.Navigate(pageTag);
+    }
+
+    /// <inheritdoc />
+    public bool Navigate(string pageTag, object? dataContext)
+    {
+        ThrowIfNavigationControlIsNull();
+
+        return NavigationControl!.Navigate(pageTag, dataContext);
     }
 
     /// <inheritdoc />
@@ -104,7 +120,15 @@ public partial class NavigationService : INavigationService
         return NavigationControl!.NavigateWithHierarchy(pageType);
     }
 
-    private void ThrowIfNavigationControlIsNull()
+    /// <inheritdoc />
+    public bool NavigateWithHierarchy(Type pageType, object? dataContext)
+    {
+        ThrowIfNavigationControlIsNull();
+
+        return NavigationControl!.NavigateWithHierarchy(pageType, dataContext);
+    }
+
+    protected void ThrowIfNavigationControlIsNull()
     {
         if (NavigationControl is null)
         {
@@ -112,7 +136,7 @@ public partial class NavigationService : INavigationService
         }
     }
 
-    private void ThrowIfPageServiceIsNull()
+    protected void ThrowIfPageServiceIsNull()
     {
         if (_pageService is null)
         {
