@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using System.Linq;
 using System.Windows;
 
 namespace Wpf.Ui;
@@ -13,7 +14,22 @@ public class UiApplication
     public bool IsApplication => _application is not null;
     public UiApplication(Application application)
     {
-        _application = application;
+        if (application is not null)
+        {
+            var hasLibraryResources = application.Resources.MergedDictionaries
+                .Where(e => e.Source is not null)
+                .Any(e => e.Source.ToString().ToLower().Contains(Appearance.AppearanceData.LibraryNamespace));
+
+            if (hasLibraryResources)
+            {
+                _application = application;
+            }
+        }
+
+        System.Diagnostics.Debug.WriteLine(
+                $"INFO | {typeof(UiApplication)} application is {_application}",
+                "Wpf.Ui"
+        );
     }
 
     private ResourceDictionary _resources;
