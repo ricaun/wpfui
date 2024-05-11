@@ -73,7 +73,7 @@ public class GridViewHeaderRowPresenter : System.Windows.Controls.GridViewHeader
                 new()
                 {
                     Source = new Uri(
-                        "pack://application:,,,/Wpf.Ui;component/Controls/GridView/GridViewHeaderRowIndicator.xaml",
+                        Appearance.ApplicationThemeManager.GetComponentPath("Controls/GridView/GridViewHeaderRowIndicator.xaml"),
                         UriKind.Absolute
                     )
                 };

@@ -3,9 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Wpf.Ui.Controls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewBasePaneButtonStyle.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewItemDefaultStyle.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewConstants.xaml" />
+        <ResourceDictionary Source="NavigationViewBasePaneButtonStyle.xaml" />
+        <ResourceDictionary Source="NavigationViewItemDefaultStyle.xaml" />
+        <ResourceDictionary Source="NavigationViewConstants.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="BottomNavigationViewTemplate" TargetType="{x:Type controls:NavigationView}">

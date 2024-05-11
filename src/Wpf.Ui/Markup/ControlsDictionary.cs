@@ -29,7 +29,7 @@ namespace Wpf.Ui.Markup;
 [UsableDuringInitialization(true)]
 public class ControlsDictionary : ResourceDictionary
 {
-    private const string DictionaryUri = "pack://application:,,,/Wpf.Ui;component/Resources/Wpf.Ui.xaml";
+    private const string ComponentPath = "Resources/Wpf.Ui.xaml";
 
     /// <summary>
     /// Initializes a new instance of the <see cref="ControlsDictionary"/> class.
@@ -37,6 +37,6 @@ public class ControlsDictionary : ResourceDictionary
     /// </summary>
     public ControlsDictionary()
     {
-        Source = new Uri(DictionaryUri, UriKind.Absolute);
+        Source = new Uri(Appearance.ApplicationThemeManager.GetComponentPath(ComponentPath), UriKind.Absolute);
     }
 }

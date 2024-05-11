@@ -10,11 +10,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Wpf.Ui.Controls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewCompact.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewLeftMinimalCompact.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationLeftFluent.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewTop.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewBottom.xaml" />
+        <ResourceDictionary Source="NavigationViewCompact.xaml" />
+        <ResourceDictionary Source="NavigationViewLeftMinimalCompact.xaml" />
+        <ResourceDictionary Source="NavigationLeftFluent.xaml" />
+        <ResourceDictionary Source="NavigationViewTop.xaml" />
+        <ResourceDictionary Source="NavigationViewBottom.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="DefaultNavigationViewStyle" TargetType="{x:Type controls:NavigationView}">

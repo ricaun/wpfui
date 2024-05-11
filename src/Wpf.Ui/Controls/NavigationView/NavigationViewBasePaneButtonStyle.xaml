@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Wpf.Ui.Controls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Controls/NavigationView/NavigationViewConstants.xaml" />
+        <ResourceDictionary Source="NavigationViewConstants.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="BasePaneButtonStyle" TargetType="{x:Type controls:Button}">

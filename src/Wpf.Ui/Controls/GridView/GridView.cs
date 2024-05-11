@@ -29,7 +29,7 @@ public class GridView : System.Windows.Controls.GridView
             new()
             {
                 Source = new Uri(
-                    "pack://application:,,,/Wpf.Ui;component/Controls/GridView/GridViewColumnHeader.xaml"
+                    Appearance.ApplicationThemeManager.GetComponentPath("Controls/GridView/GridViewColumnHeader.xaml")
                 )
             };
 

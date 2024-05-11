@@ -46,7 +46,7 @@ public partial class ContextMenuLoader : ResourceDictionary
             new()
             {
                 Source = new Uri(
-                    "pack://application:,,,/Wpf.Ui;component/Controls/ContextMenu/ContextMenu.xaml"
+                    Appearance.ApplicationThemeManager.GetComponentPath("Controls/ContextMenu/ContextMenu.xaml")
                 )
             };
 
