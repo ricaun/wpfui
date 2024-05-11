@@ -46,4 +46,13 @@ public partial class DataPage
             );
         }
     }
+
+    private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+    {
+        var button = sender as System.Windows.Controls.Button;
+        if (button?.Background is SolidColorBrush solidColor)
+        {
+            Wpf.Ui.Appearance.ApplicationAccentColorManager.Apply(solidColor.Color);
+        }
+    }
 }
